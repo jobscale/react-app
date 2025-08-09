@@ -1,7 +1,7 @@
 FROM node:lts-bookworm-slim
 SHELL ["bash", "-c"]
 WORKDIR /home/node
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 ENV NODE_ENV=production
 COPY --chown=node:staff package.json .
 RUN npm i
